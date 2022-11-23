@@ -15,7 +15,6 @@ public class ClienteController {
     public ResponseEntity<String> selectById(@PathVariable("id") Long id) {
         return ResponseEntity.ok("selectById " + id);
     }
-
     @GetMapping("/nome/{nome}")
     public ResponseEntity<String> selectByNome(@PathVariable("nome") String nome) {
         return ResponseEntity.ok("selectByNome " + nome);
@@ -25,14 +24,11 @@ public class ClienteController {
     public ResponseEntity<String> insert(@RequestBody String cliente){
         return ResponseEntity.ok("insert\n " + cliente);
     }
-
     @PutMapping("{id}")
     public ResponseEntity<String> update(@PathVariable("id") Long id, @RequestBody String cliente){
         return
                 ResponseEntity.ok("update\n" + cliente);
-
     }
-
     @DeleteMapping("{id}")
     public ResponseEntity<String> delete(@PathVariable("id") Long id){
         return ResponseEntity.ok("delete " + id);
